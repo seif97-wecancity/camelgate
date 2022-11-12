@@ -20,7 +20,7 @@ function changetoenglish(){
   
   // cssId =! cssId ;
   
-  console.log(cssId + 'iama');
+  // console.log(cssId + 'iama');
   // cssId=!cssId
   var head  = document.getElementsByTagName('head')[0];
 
