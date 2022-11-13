@@ -32,7 +32,7 @@ $(document).ready(function () {
                 <li><a href="Drivers.html" class="page-scroll" data-i18n="Drivers">Drivers</a></li>
                 <li><a href="contact-us.html" class="page-scroll" data-i18n="Contact">Contact Us </a></li>
              
-                     <li class=""><a href="#"  class="page-scroll" id="lang" data-i18n="lang" onClick=changetoenglish()>عربي</a></li>
+                     <li class=""><a href=""  class="page-scroll" id="lang" data-i18n="lang" onclick="changetoenglish()">عربي</a></li>
 
             </ul>
         </div>

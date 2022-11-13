@@ -1,6 +1,6 @@
 
 
- let cssId = false ;
+ 
 
 // if(localStorage.getItem('language') === 'ar'){
 //   document.getElementById("myImg").src = "assets/img/Picture for Each/arabic.png";
@@ -15,16 +15,21 @@ jQuery(function ($) {
   $("#lang").click(function(){
     changetoenglish();
   });
-
+  let cssId = false;
 function changetoenglish(){
-  cssId=!cssId
+  
+  // cssId =! cssId ;
+  
+  console.log(cssId + 'iama');
+  // cssId=!cssId
   var head  = document.getElementsByTagName('head')[0];
 
-  if (cssId)
+  if (localStorage.getItem('language') == 'en')
 { 
     // document.getElementById("false").remove();
     localStorage.setItem('language', 'ar');
     localStorage.setItem('check', true);
+    
     let link  = document.createElement('link');
     link.id   = cssId;
     link.rel  = 'stylesheet';
@@ -36,7 +41,7 @@ function changetoenglish(){
     document.getElementById("pictureofsign").src = "assets/img/arabicsign.png";
     document.getElementById("myImg").src = "assets/img/Picture for Each/arabic.png";
     document.getElementById("secondimg").src = "assets/img/arabic1.png";
-    document.location.reload();
+    setLanguage(cssId);
     
 }else{
 	localStorage.setItem('language', 'en');
@@ -54,12 +59,12 @@ function changetoenglish(){
   document.getElementById("myImg").src = "assets/img/Picture for Each/Picture for Each-01.png";
     document.getElementById("secondimg").src = "assets/img/app-mobile-image-3.png";
     document.getElementById("pictureofsign").src = "assets/img/englishsign.png";
-  
+    setLanguage(cssId);
 }
 	// localStorage.setItem('language', 'en');
 	const language = localStorage.getItem('language');
 	setLanguage(cssId);
-	
+  
 }
  
 
